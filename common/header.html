@@ -124,7 +124,8 @@
     },
 
     html() {
-      const contents= h('a', { attributes: { href: settings.website_url } }, this.logo());
+      const contents=[]
+      contents= h('a', { attributes: { href: settings.website_url } }, this.logo());
       debugger
       console.log('data: '+contents);
       contents.push(this.attach(h('span',{key:'header-text'},title)));
