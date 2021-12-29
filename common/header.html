@@ -124,7 +124,8 @@
     },
 
     html() {
-      debugger     
+      debugger    
+      $("div.title").text("this is test header");
       return h('a', { attributes: { href: settings.website_url } }, this.logo());
     },
 
