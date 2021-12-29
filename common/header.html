@@ -102,7 +102,9 @@
 
   api.createWidget('brand-logo', {
     tagName: 'div.title',
-
+    headerText(){
+      return h('span',{key:'header-text'},title);
+    },
     logo() {
       const mobileView = this.site.mobileView;
 
@@ -121,9 +123,8 @@
       }
     },
 
-    html() {
-
-      return h('div.title', h('a', { attributes: { href: settings.website_url } }, this.logo()))
+    html() {            
+      return [h('a', { attributes: { href: settings.website_url } }, this.logo()),this.headerText()];
     },
 
     click(e) {
