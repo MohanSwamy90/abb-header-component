@@ -123,6 +123,10 @@
       }
     },
 
+    api.onPageChange(()=>{
+            $("div.title").after("<p>This is paragrap</p>");
+    });
+
     html() {
       debugger      
       return h('a', { attributes: { href: settings.website_url } }, this.logo());
