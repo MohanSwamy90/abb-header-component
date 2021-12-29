@@ -117,15 +117,14 @@
       if (showMobileLogo) {
         return h('img#brand-logo.logo-big', { key: 'logo-mobile', attributes: { src: mobileLogoUrl, alt: title } });
       } else if (logoUrl.length) {
-        return h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: logoUrl, alt: title } });
+        return [h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: logoUrl, alt: title } }),h('h2#brand-text-logo.text-logo', { key: 'logo-text' }, title)];
       } else {
         return h('h2#brand-text-logo.text-logo', { key: 'logo-text' }, title);
       }
     },
 
     html() {
-      const contents=[];
-      contents.push(this.attach(h('a', { attributes: { href: settings.website_url } }, this.logo()))) ;
+      const contents= h('a', { attributes: { href: settings.website_url } }, this.logo());
       debugger
       console.log('data: '+contents);
       contents.push(this.attach(h('span',{key:'header-text'},title)));
