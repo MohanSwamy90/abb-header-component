@@ -123,10 +123,7 @@
       }
     },
 
-    html() {
-      const contents = [];
-      debugger
-      contents.push(this.attach(h('a', { attributes: { href: settings.website_url } }, this.logo())));
+    html() {     
       return h('a', { attributes: { href: settings.website_url } }, this.logo());
     },
 
