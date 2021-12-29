@@ -5,6 +5,8 @@
 
   #brand-logo {
     max-height: 32px;
+    height: 50px;
+    width: 60px;
   }
 
   #brand-text-logo {
@@ -25,13 +27,13 @@
       color: var(--secondary);
       line-height: 22px;
       &:hover {
-        color: var(--quaternary);
-        background-color: var(--quaternary-low);
+        color:#242424;
+        background-color:white;
       }
       &.active > a,
       > a.active {
-        color: var(--secondary);
-        background-color: var(--quaternary);
+        color:#242424;
+        background-color:white;
       }
     }
   }
@@ -77,4 +79,10 @@
       float: left;
     }
   }
+}
+
+.b-header .nav-pills>li>a{
+  color:#242424;
+  font-size: 13px;
+  font-family: Abbvoice-medium,sans-serif;
 }
