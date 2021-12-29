@@ -115,7 +115,7 @@
       if (showMobileLogo) {
         return h('img#brand-logo.logo-big', { key: 'logo-mobile', attributes: { src: mobileLogoUrl, alt: title } });
       } else if (logoUrl.length) {
-        return h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: logoUrl, alt: title } });
+        return h('img#brand-logo.logo-big', { key: 'logo-big', attributes: { src: logoUrl, alt: title } },title);
       } else {
         return h('h2#brand-text-logo.text-logo', { key: 'logo-text' }, title);
       }
