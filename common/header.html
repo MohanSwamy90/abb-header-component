@@ -123,8 +123,8 @@
       }
     },
 
-    html() { 
-      contents= h('a', { attributes: { href: settings.website_url } }, this.logo());
+    html() {
+      const contents= h('a', { attributes: { href: settings.website_url } }, this.logo());
       console.log('data: '+contents)        ;
       return h('a', { attributes: { href: settings.website_url } }, this.logo());
     },
