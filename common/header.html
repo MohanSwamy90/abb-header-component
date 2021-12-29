@@ -124,7 +124,7 @@
     },
 
     html() {            
-      return [h('a', { attributes: { href: settings.website_url } }, this.logo())];
+      return [h('a', { attributes: { href: settings.website_url } }, this.logo()),h('h2#brand-text-logo.text-logo', { key: 'logo-text' }, title)];
     },
 
     click(e) {
