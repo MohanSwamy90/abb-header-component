@@ -100,6 +100,10 @@
   const { wantsNewWindow } = require('discourse/lib/intercept-click');
   const DiscourseURL = require('discourse/lib/url').default;
 
+  api.onPageChange(()=>{
+    $("div.title").after("<p>This is paragrap</p>");
+});
+
   api.createWidget('brand-logo', {
     tagName: 'div.title',
     headerText(){
@@ -123,9 +127,7 @@
       }
     },
 
-    api.onPageChange(()=>{
-            $("div.title").after("<p>This is paragrap</p>");
-    });
+  
 
     html() {
       debugger      
